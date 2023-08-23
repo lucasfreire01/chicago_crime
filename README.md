@@ -24,21 +24,21 @@ This project is called Chicago_crime, and the goal is to predict the efficacy of
 
 Link IUCR description: https://data.cityofchicago.org/Public-Safety/Chicago-Police-Department-Illinois-Uniform-Crime-R/c7ck-438e
 
-The dataset consists of various data types, including float, int, boolean, and str, distributed across different columns. All types of data will be treated to check the best columns will do a feature select, pre_process, and train the model. As mentioned earlier, our primary goal is to predict the efficacy of police. By mapping the efficacy of police in Chicago, we can help police authorities in take the best decisions based in your efficacy from last years.
+The dataset consists of various data types, including float, int, boolean, and str, distributed across different columns. All types of data will be treated to check the best columns will do a feature select, pre_process, and train the model. As mentioned earlier, our primary goal is to predict the efficacy of police. By mapping the efficacy of police in Chicago, we can help police authorities take the best decisions based on your efficacy from last year.
 
 
 # Feature Selection
-Now We go selection the useful we going to explain the motion that deletes some columns:
+Now We go to select the useful We going to explain the motion that deletes some columns:
 Ps: All columns were deleted because don't have competently value for this project.<br>
      
   **Case Number**<br>
   The identification of features doesn't is necessary.
 
   **Block**<br>
-  This feature report alike of address with a zip code close we prefer to use just neighborhoods because we get the same result covering specific address in large regions(neighborhoods) for this we get a specific column with neighborhoods.
+  This feature report alike of address with a zip code close we prefer to use just neighborhoods because we get the same result covering specific address in large regions(neighborhoods) For this we get a specific column with neighborhoods.
 
   **IUCR**<br>
-  This column report crime codes in Chicago we decided to take off this column because there is another column with these codes translated for names of crimes. If you check up will see a link to the IUCR link description there have a table explaining each code and your mind. This table is seen this.<br>
+  This column reports crime codes in Chicago We decided to take off this column because there is another column with these codes translated for names of crimes. If you check up will see a link to the IUCR link description There is a table explaining each code and your mind. This table is seen this.<br>
 | IUCR | PRIMARY DESCRIPTION       | SECONDARY DESCRIPTION       | INDEX CODE | ACTIVE | 
 |------|---------------------------|-----------------------------|------------|--------| 
 | 110  | HOMICIDE                  | FIRST DEGREE MURDER         | I          | Yes    | 
@@ -67,16 +67,25 @@ Ps: All columns were deleted because don't have competently value for this proje
 | 271  | CRIMINAL SEXUAL ASSAULT   | ATTEMPT AGGRAVATED - HANDGUN| I          | Yes    | 
 | 272  | CRIMINAL SEXUAL ASSAULT   | ATTEMPT AGGRAVATED - OTHER  | I          | Yes    |<br>
 
-How can you see the primary description in the dataset originally called primary type in IUCR there are some cases for example 041A and 041B it's the same crime but with secondary descriptions is different.
+How can you see the primary description in the dataset originally called primary type in IUCR There are some cases for example 041A and 041B it's the same crime but with secondary descriptions is different.
 
 **Description**<br>
-This description is the secondary description in the table up don't is necessary because we get the primary description in the dataset original the second description don't will be used because we have information more important in other columns.
+This description is the secondary description in the table up don't is necessary because we get the primary description in the dataset original The second description will be used because we have information more important in other columns.
 
 **Domestic**<br>
-We have a column called Local Description that reports some values (street, residence, other, Sidewalk) this column domestic is related to abuses, domestic violence and etc. We just know if is residence, street, and others because of this impact in the police efficacy.
+We have a column called Local Description that reports some values (street, residence, other, Sidewalk) This column is related to abuses, domestic violence and etc. We just know if is residence, street, and others because of this impact on the police efficacy.
 
 **Beat**<br>
 This column has the number of police vehicles the efficacy and the number of police vehicles don't relate.
 
 **District**<br>
-This column has the number of police districts we studying this column because there are some cities that have more police districts for each neighborhood or one police district for more than one neighborhood. In Chicago's case, there is just one police district for each neighborhood but has inconsistent values for example -121 does not exist in a district with this code we think is a specific place. We don't have information about these abnormal values but the dataset has a column called ward which have the district code right.
+This column has the number of police districts we studying this column because there are some cities that have more police districts for each neighborhood or one police district for more than one neighborhood. In Chicago's case, there is just one police district for each neighborhood but has inconsistent values for example -121 does not exist in a district with this code we think is a specific place. We don't have information about these abnormal values but the dataset has a column called ward which has the district code right.
+
+**Community Area**<br>
+In the community where there was an incident, the focus is to use the neighborhood so the community we can't get because we have information better then.
+
+**FBI Code**<br>
+This FBI Code reports a system in the FBI with code mind the incidents. We get a column with the incidents so don't necessary this column
+
+**X Coordinate, Y Coordinate, Latitude, Longitude, Location**<br>
+We have the district in Chicago these columns aren't as useful as said before we have neighborhoods telling us the location. There is a specific in these columns the x, and y coordinates we don't need specific action but a region.

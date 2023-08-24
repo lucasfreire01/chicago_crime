@@ -85,7 +85,24 @@ This column has the number of police districts we studying this column because t
 In the community where there was an incident, the focus is to use the neighborhood so the community we can't get because we have information better then.
 
 **FBI Code**<br>
-This FBI Code reports a system in the FBI with code mind the incidents. We get a column with the incidents so don't necessary this column
+This FBI Code reports a system in the FBI with code mind the incidents. We get a column with the incidents so don't this column
 
 **X Coordinate, Y Coordinate, Latitude, Longitude, Location**<br>
 We have the district in Chicago these columns aren't as useful as said before we have neighborhoods telling us the location. There is a specific in these columns the x, and y coordinates we don't need specific action but a region.
+
+Feature Used
+---
+**Date**<br>
+This column has the date of rows and information on features This is important because it gives us insights into there is varying numbers of cases in different parts of the year. Also as we have dates of many years maybe using this column we get some defaults.
+
+**Primary Type**<br>
+The primary type reports the names of incidents.
+
+**Location Description**<br>
+This column is important because based on the location maybe there is a varying in police efficacy. Using this information we can get a graph to have a better vision of the police efficacy.
+
+**Arrest**<br>
+Target column this column will tell us the efficacy. Join all datas predicts we have a answer to our problem(Goal of the project)
+
+**Ward**<br>
+This column has the number of each neighborhood. We prefer to use this column because we'd like a large region and don't have a specific location with this choose we make it the goal but computationally cheap.

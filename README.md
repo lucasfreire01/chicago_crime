@@ -106,3 +106,8 @@ Target column this column will tell us the efficacy. Join all datas predicts we 
 
 **Ward**<br>
 This column has the number of each neighborhood. We prefer to use this column because we'd like a large region and don't have a specific location with this choose we make it the goal but computationally cheap.
+![Map Numer Chicago](https://github.com/lucasfreire01/chicago_crime/blob/main/clearmap1.jpg)<br>
+This Image show the number of the neighborhood in Chicago exactly the numbers in the column.
+
+**NOTE**
+This dataset is very large and I can't get with all datasets so I split into two parts the first part of model training and the second the test.

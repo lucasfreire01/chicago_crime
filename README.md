@@ -111,3 +111,36 @@ This Image show the number of the neighborhood in Chicago exactly the numbers in
 
 **NOTE**
 This dataset is very large and I can't get with all datasets so I split into two parts the first part of model training and the second the test.
+
+# Pre_Process 
+The first step was to delete some columns said up, we took the district columns and treated them, This column was transformed in the dictionary to have a structure where each value has your respective names shown below:
+district = {<br>
+    1.0 : 'Bedford',<br>
+    2.0 : 'South Side',<br>
+    3.0 : 'Pullman',<br>
+    4.0 : 'Cook County',<br>
+    5.0 : 'Roseland',<br>
+    6.0 : 'Auburn Gresham',<br>
+    7.0 : 'West Englewood',<br>
+    8.0 : 'Chicago Lawn',<br>
+    9.0 : 'Pilsen',<br>
+    10.0 : 'South Lawndale',<br>
+    11.0 : 'Near West Side',<br>
+    12.0 : 'Wicker Park',<br>
+    14.0 : 'Logan Square',<br>
+    15.0 : 'Austin',<br>
+    16.0 : 'North Mayfair',<br>
+    17.0 : 'Albany Park',<br>
+    18.0 : 'Goose Island',<br>
+    19.0 : 'Lakeview',<br>
+    20.0 : 'Lincoln Square',<br>
+    22.0 : 'Beverly',<br>
+    24.0 : 'Rogers Park',<br>
+    25.0 : 'Belmont Cragin'<br>
+}<br> 
+This information was extracted from the Police Department of Chicago.<br>
+Police Department of Chicago: https://home.chicagopolice.org/about/police-districts/<br>
+
+We go to the Arrest column to treat too, This column has boolean values so we used the One Hot Encode to transform these values into numeric then deleted this column resulting in two columns Arrest_False and Arrest_True.<br>
+
+Finally, we see the missing values, in the column with the most missing values we have 2185 missing values which mean 1% of the dataset so using a constant statistic was a good idea in the case of string columns the Mode was used for it and in the numeric columns we used the mean. Next, these numeric columns changed the types because we got column that the values is dates so we don't have decimal values in dates so change the types as necessary.
